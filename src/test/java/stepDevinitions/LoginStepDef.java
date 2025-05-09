@@ -20,7 +20,7 @@ public class LoginStepDef {
         loginPage.openLoginModal();
     }
 
-    @When("user input {string} as username")
+    @When("user input {string} as username on app")
     public void inputUsername(String username) {
         loginPage.setUsername(username);
     }

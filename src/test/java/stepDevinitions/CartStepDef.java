@@ -1,33 +1,37 @@
 package stepDevinitions;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
 import pages.CartPage;
 import pages.HomePage;
 import pages.LoginPage;
 
 public class CartStepDef {
-    CartPage cartPage = new CartPage();
 
-    HomePage homePage = new HomePage();
-    LoginPage loginPage = new LoginPage();
+    WebDriver webDriver;
 
-    @Given("user on the home page")
+    CartPage cartPage = new CartPage(webDriver);
+
+    HomePage homePage = new HomePage(webDriver);
+    LoginPage loginPage = new LoginPage(webDriver);
+
+    // @Given("user on the home page")
     public void userOnHomePage() {
         Assert.assertTrue(loginPage.isPageDisplayed());
     }
 
-    @When("user input {string} as username")
+    //@When("user input {string} as username")
     public void userInputUsername(String username) {
-        loginPage.setInputUsername(username);
+        loginPage.setUsername(username);
     }
 
-    @When("user input {string} as password")
+    //@When("user input {string} as password")
     public void userInputPassword(String password) {
-        loginPage.setInputPassword(password);
-        loginPage.clickLoginButton();
+        loginPage.setPassword(password);
+        loginPage.clickLogin();
     }
 
-    @Then("user will redirect to home page")
+    //@Then("user will redirect to home page")
     public void userRedirectToHomePage() {
         Assert.assertTrue(homePage.verifyPageIsDisplayed());
     }

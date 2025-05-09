@@ -1,9 +1,11 @@
 package pages;
 
 import org.openqa.selenium.By;
-import static helper.Utility.webDriver;
+import org.openqa.selenium.WebDriver;
 
 public class ProductPage {
+
+    WebDriver webDriver;
 
     By iconShoppingCart = By.id("shopping_cart_container");
     By firstProductAddToCartButton = By.xpath("(//button[contains(text(),'Add to cart')])[1]");

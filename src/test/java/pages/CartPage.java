@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 
 public class CartPage {
     WebDriver driver;
-
     public CartPage(WebDriver driver) {
         this.driver = driver;
     }
@@ -61,5 +60,34 @@ public class CartPage {
 
     public void deleteProduct() {
         driver.findElement(deleteButton).click();
+    }
+
+    public void clickFirstProductImage() {
+        // TODO : add script here
+    }
+
+    public void goToCartPage() {
+        // TODO : add script Here
+    }
+
+    public void inputCheckoutForm(String name, String country, String city, String card, String month, String year) {
+        // TODO : add script here
+    }
+
+    public boolean isConfirmationDisplayed() {
+        // TODO : add script here
+
+        return  true;
+    }
+
+    public String getConfirmationText() {
+        // TODO : add script here
+
+        return "";
+    }
+
+    public void deleteProductFromCart() {
+        // TODO : Add script here
+
     }
 }

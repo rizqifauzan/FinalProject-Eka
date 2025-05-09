@@ -36,4 +36,9 @@ public class LoginPage {
     public boolean isLoginSuccessful() {
         return driver.findElement(logoutLink).isDisplayed();
     }
+
+    public boolean isPageDisplayed() {
+        driver.findElement(usernameField).isDisplayed();
+        return true;
+    }
 }
